@@ -19,6 +19,9 @@ li {
   padding-bottom: 40px;
   margin: 0;
 }
+.logotype .mobile-menu-button {
+  display: none;
+}
 .navigation {
   background-color: #1c4489;
   margin-right: 0;
@@ -30,11 +33,14 @@ li {
   margin: 0;
 }
 .navigation .main-menu li {
+  height: 60px;
   line-height: 30px;
   padding: 15px;
   font-size: 16px;
   list-style: none;
-  transition: all 0.3s;
+}
+.navigation .main-menu li:hover {
+  border-bottom: 5px solid #115fd4;
 }
 .navigation .main-menu li a {
   color: #fff;
@@ -46,20 +52,28 @@ li {
 .navigation .main-menu .dropmenu .dropdown-menu {
   background-color: #133166;
   color: #fff;
-  min-width: 600px;
+  min-width: 650px;
   border-radius: 0;
   border: none;
   padding: 20px;
   margin: 0;
   top: 59px;
 }
-.navigation .main-menu .dropmenu .dropdown-menu li {
+.navigation .main-menu .dropmenu .dropdown-menu .drop-list {
+  width: 32%;
+  margin-left: 5px;
+  display: inline-block;
+  vertical-align: top;
+}
+.navigation .main-menu .dropmenu .dropdown-menu .drop-list li {
+  height: 30px;
   float: none;
   display: block;
   padding: 5px;
-  font-size: 16px;
+  font-size: 13px;
+  line-height: 15px;
 }
-.navigation .main-menu .dropmenu .dropdown-menu li:hover a {
+.navigation .main-menu .dropmenu .dropdown-menu .drop-list li:hover a {
   color: #1c4489;
 }
 .navigation .main-menu .dropmenu .dropdown-menu .title {
@@ -68,7 +82,7 @@ li {
 .navigation .main-menu .dropmenu .dropdown-menu .button {
   background: none;
   border: 2px solid #fff;
-  padding: 5px 15px;
+  padding: 5px 30px;
   transition: all 0.5s;
 }
 .navigation .main-menu .dropmenu .dropdown-menu .button:hover {
@@ -77,9 +91,6 @@ li {
 }
 .navigation .main-menu .dropmenu:hover .dropdown {
   display: block;
-}
-.navigation .mobile-menu-button {
-  display: none;
 }
 .about {
   min-height: 60vh;
@@ -204,25 +215,19 @@ li {
   margin-top: 50px;
 }
 .call-back .forms .item {
-  padding: 0;
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 10px;
   margin-bottom: 10px;
 }
-.call-back .forms .name,
-.call-back .forms .email,
-.call-back .forms .phone {
-  margin: 15px 0;
-}
 .call-back .forms label {
-  padding: 5px 10px;
+  padding: 10px;
   color: #fff;
 }
 .call-back .forms input {
-  max-width: 250px;
   border: none;
-  padding: 3px;
-}
-.call-back .forms input:focus {
-  box-shadow: 0px 0px 4px #fff;
+  padding: 5px;
+  background: #fff;
 }
 .call-back .forms .submit-button {
   padding: 20px 25px;
@@ -252,37 +257,54 @@ li {
 }
 /* Media */
 @media (max-width: 768px) {
-  .logotype img {
-    width: 100%;
+  .logotype {
+    padding-top: 10px;
+    padding-bottom: 10px;
   }
-  .navigation {
-    padding: 10px;
-    text-align: right;
+  .logotype .mobile-header {
+    text-align: left;
   }
-  .navigation .main-menu {
-    display: none;
+  .logotype .mobile-header img {
+    width: 80%;
   }
-  .navigation .main-menu li {
-    float: none;
-    padding: 3px;
-  }
-  .navigation .main-menu li:nth-last-child(n+2) {
-    border-bottom: 1px solid #fff;
-  }
-  .navigation .mobile-menu-button {
+  .logotype .mobile-header .mobile-menu-button {
     display: block;
     width: 40px;
-    margin: auto;
-    padding: 5px;
+    font-size: 25px;
+    padding-top: 2px;
+    atext-align: center;
+    float: left;
     border-radius: 5px;
-    border: 1px solid #fff;
-    color: #fff;
+    color: #1c4489;
+  }
+  .navigation {
+    display: none;
+    position: absolute;
+    z-index: 2;
+    left: 0;
+    padding: 10px;
+  }
+  .navigation .main-menu li {
+    height: 40px;
+    float: none;
+    padding: 5px;
+  }
+  .navigation .main-menu .dropmenu .dropdown-menu {
+    min-width: 210px;
+  }
+  .navigation .main-menu .dropmenu .dropdown-menu .drop-list {
+    width: 100%;
+    margin-bottom: 15px;
+    display: block;
+  }
+  .navigation .main-menu .dropmenu .dropdown-menu .button {
+    padding: 5px 15px;
   }
   .about {
     padding: 10px;
   }
-  .counter .item:nth-last-child(n+2) {
-    border-bottom: 1px solid #fff;
+  .about .row {
+    margin: 0;
   }
   .benefits .item {
     margin-bottom: 20px;
@@ -296,16 +318,49 @@ li {
   .testimonials .carousel-inner .item p {
     font-size: 11px;
   }
-  .call-back label {
-    min-width: 33%;
+  .call-back .forms .item {
+    margin-right: 0;
+    margin-bottom: 10px;
+    width: 100%;
   }
-  .call-back .button {
-    text-align: right;
+  .call-back .forms .item label {
+    margin-bottom: 0;
+  }
+  .call-back .forms .item input {
+    width: 100%;
   }
   .footer {
     padding: 10px;
   }
   .footer .info {
     display: none;
+  }
+}
+@media (max-width: 992px) {
+  .navigation .main-menu li {
+    font-size: 12px;
+  }
+  .benefits .title {
+    min-height: 60px;
+    display: block;
+  }
+  .benefits .discription {
+    width: 100%;
+    display: inline-block;
+    vertical-align: middle;
+    min-height: 100px;
+  }
+  .call-back {
+    padding: 20px;
+  }
+  .call-back .forms .item {
+    margin-bottom: 10px;
+    width: 100%;
+  }
+  .call-back .forms .item label {
+    margin-bottom: 0;
+  }
+  .call-back .forms .item input {
+    width: 100%;
   }
 }

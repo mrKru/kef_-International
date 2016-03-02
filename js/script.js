@@ -1,6 +1,6 @@
 $(document).ready(function() {
 	$(".mobile-menu-button").click(function() {
-		$(".main-menu").slideToggle();
+		$(".navigation").slideToggle();
 	});
 	$('ul > li').hover(function() {
     $(this).find('.dropdown-menu').stop(true, true).fadeIn();

@@ -21,30 +21,27 @@
     <header>
       <div class="container-fluide">
         <div class="row logotype">
-          <div class="col-md-12 text-center">
-          <a href="/"><img src="images/logo.png" alt="logotype"></a>
-          </div>
-        </div>     
-        <div class="row navigation">
-            <div class="col-md-12 text-center">
+          <div class="col-md-12 mobile-header text-center">
+            <a href="/"><img src="images/logo.png" alt="logotype"></a>
             <div class="mobile-menu-button">
               <i class="fa fa-bars"></i>
             </div>
+          </div>
+        </div>
+        <div class="container-fluide opacity">
+          <div class="row navigation">
+            <div class="col-md-12 text-center">
               <ul class="main-menu text-uppercase">
                 <li class="dropmenu"><a href="#">Aliya Shipping</a>
-                  <div class="dropdown-menu hidden-xs">
-                    <div class="row">
-                      <div class="col-md-4">
-                        <ul class="text-uppercase">
+                  <div class="dropdown-menu">
+                        <ul class="text-uppercase drop-list">
                           <li class="title"><a href=""></a>First steps</li>
                           <li><a href=""></a>Pre-move advice</li>
                           <li><a href=""></a>Types of shipment</li>
                           <li><a href=""></a>Timing your shipments</li>
                           <li><a href=""></a>Free Onsite Surve</li>
                         </ul>
-                      </div>
-                      <div class="col-md-4">
-                        <ul class="text-uppercase">
+                        <ul class="text-uppercase drop-list">
                           <li class="title"><a href=""></a>Pack & Ship</li>
                           <li><a href=""></a>Packing</li>
                           <li><a href=""></a>Shipping</li>
@@ -55,9 +52,7 @@
                           <li><a href=""></a>Vehicle Importing</li>
                           <li><a href=""></a>Appliances</li>
                         </ul>
-                      </div>
-                      <div class="col-md-4">
-                        <ul class="text-uppercase">
+                        <ul class="text-uppercase drop-list">
                           <li class="title"><a href=""></a>Aliya Resource</li>
                           <li><a href=""></a>Aliya Blog</li>
                           <li><a href=""></a>Webinars (Israel-related)</li>
@@ -67,11 +62,9 @@
                           <li><a href=""></a>Real Estate</li>
                           <li><a href=""></a>Video Gallery</li>
                         </ul>
-                      </div>
-                      <div class="col-md-12 text-right">
+                      <div class="button-block text-right">
                          <button type="button" class="button text-uppercase" name="consultation">Free consultation</button>
                       </div>
-                    </div>
                   </div>
                 </li>
                 <li><a href="#">Moving Services</a></li>
@@ -82,6 +75,8 @@
               </ul>
             </div>
         </div>
+        </div>     
+        
       </div>
     </header>
     <main>
@@ -99,15 +94,15 @@
       <div class="container-fluide counter">
         <div class="container">
           <div class="row">
-            <div class="col-md-4 item">
+            <div class="col-sm-4 item">
               <p><span class="number">5,366</span></p>
               <p><span class="discription text-uppercase">Customers</span></p>
             </div>
-            <div class="col-md-4 item">
+            <div class="col-sm-4 item">
               <p><span class="number">2,302</span></p>
               <p><span class="discription text-uppercase">Shipments</span></p>
             </div>
-            <div class="col-md-4 item">
+            <div class="col-sm-4 item">
               <p><span class="number">36</span></p>
               <p><span class="discription text-uppercase">Years Experience</span></p>
             </div>
@@ -118,7 +113,7 @@
       <div class="container-fluide benefits text-center">
         <h2 class="text-uppercase">Benifits of moving with KEF</h2>
         <div class="row services">
-          <div class="col-md-3 col-xs-12 item text-center">
+          <div class="col-md-3 col-sm-3 col-xs-12 item text-center">
             <div class="icon">
               <i class="fa fa-check-circle"></i>
             </div>
@@ -129,7 +124,7 @@
             ln hendrerñ.
             </p>
           </div>
-          <div class="col-md-3 col-xs-12 item text-center">
+          <div class="col-md-3 col-sm-3 col-xs-12 item text-center">
             <div class="icon">
               <i class="fa fa-check-circle"></i>
             </div>
@@ -140,7 +135,7 @@
             ln hendrerñ.
             </p>
           </div>
-          <div class="col-md-3 col-xs-12 item text-center">
+          <div class="col-md-3 col-sm-3 col-xs-12 item text-center">
             <div class="icon">
               <i class="fa fa-check-circle"></i>
             </div>
@@ -151,7 +146,7 @@
             ln hendrerñ.
             </p>
           </div>
-          <div class="col-md-3 col-xs-12 item text-center">
+          <div class="col-md-3 col-sm-3 col-xs-12 item text-center">
             <div class="icon">
               <i class="fa fa-check-circle"></i>
             </div>
@@ -199,21 +194,20 @@
       </div>
       <div class="container-fluide call-back text-center">
           <h2 class="text-uppercase">Request a call back</h2>
-          <div class="container">
-            <div class="row forms">
-            <div class="col-md-3 col-sm-8 item name text-left">
+          <div class="container forms">
+            <div class="item">
               <label class="text-uppercase">Name</label>
               <input type="text" name="name">
             </div>
-            <div class="col-md-3 col-sm-8 item email text-left">
+            <div class="item">
               <label class="text-uppercase">Email</label>
               <input type="text" name="email">
             </div>
-            <div class="col-md-4 col-sm-8 email phone item text-left">  
+            <div class="item">  
               <label class="text-uppercase">Phone number</label>
               <input type="text" name="phone">
             </div>
-            <div class="col-md-2 col-sm-7 item button text-left">
+            <div class="item">
               <button type="submit" name="submit" class="submit-button">Submit</button>
             </div>
           </div>
